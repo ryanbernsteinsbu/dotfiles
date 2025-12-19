@@ -16,16 +16,25 @@
     libevent
     ncurses
     imagemagick imagemagick.dev
+    cairosvg tree-sitter ripgrep
 
     # Lua + luarocks
-    lua51Packages.lua luarocks
-
+    lua51Packages.lua luarocks stylua 
     # Node + npm
     nodejs_24
 
     # Python
-    python3
-    
+    python312 python312Packages.jupytext python312Packages.pip python312Packages.jupyter-client
+    python312Packages.cairosvg python312Packages.pnglatex python312Packages.plotly python312Packages.kaleido
+    python312Packages.pyperclip python312Packages.nbformat python312Packages.pillow python312Packages.tree-sitter python312Packages.pynvim
+    python312Packages.wand
+
+    #julia
+    julia_111
+
+    # Go
+    go
+
     #rust
     rustc cargo
 
@@ -47,7 +56,17 @@
   ];
 
   # Make Neovim the default editor
-  programs.neovim.enable = true;
-  programs.neovim.defaultEditor = true;
+  programs.neovim = {
+      enable = true;
+      defaultEditor = true;
+  }; 
+  programs.java = {
+      enable = true;
+      package = pkgs.javaPackages.compiler.openjdk24;
+  };
+  environment.variables = {
+      PKG_CONFIG_PATH =
+          "${pkgs.imagemagick.dev}/lib/pkgconfig";
+  };
 }
 
