@@ -68,5 +68,7 @@
       PKG_CONFIG_PATH =
           "${pkgs.imagemagick.dev}/lib/pkgconfig";
   };
+  imports = [./firaMono.nix];
 }
+
 
