@@ -1,180 +1,44 @@
 building Nix...
 building the system configuration...
-evaluation warning: The option `services.xserver.displayManager.defaultSession' defined in `/etc/nixos/configuration.nix' has been renamed to `services.displayManager.defaultSession'.
+evaluation warning: The option `hardware.pulseaudio' defined in `/etc/nixos/configuration.nix' has been renamed to `services.pulseaudio'.
+evaluation warning: The option `hardware.opengl.enable' defined in `/etc/nixos/configuration.nix' has been renamed to `hardware.graphics.enable'.
 these 11 derivations will be built:
-  /nix/store/xcc36n0wh3z3yg5bcrhasim0qdidxd61-source.drv
-  /nix/store/vs23ryjdbajzyz5al1q6srqsr2gfqa9y-fira-monoNF-2.3.3.drv
-  /nix/store/7db6ac6mzhcxchm4kp9mnkayn6g3qp1m-fc-cache.drv
-  /nix/store/84hnf4vdjmk6x6s0ivijbgi8dr4pcxyk-fc-00-nixos-cache.conf.drv
-  /nix/store/xxwl0y5rmxa7gp2savz772r2fkq3s61k-fontconfig-conf.drv
-  /nix/store/qc427751vxvdj68mi8x1672sc8kn1pdz-fontconfig-etc.drv
-  /nix/store/f015a0mgyi72124g38w7s1gwxggbmm8x-xserver.conf.drv
-  /nix/store/iplkj4lds0434qfrf02x107cbzbcr2dk-xserver-wrapper.drv
-  /nix/store/s2s8h0vlcgm81zgpsyp4k3q7p8kg1lpr-lightdm.conf.drv
-  /nix/store/5ha5mmip9gv2cxlxz4n7kj2vmbj9xyph-etc.drv
-  /nix/store/6v906fyplgwxcyj62gd9hvx5fv6djlmj-nixos-system-hiego-25.05.813221.9a7b80b6f82a.drv
-building '/nix/store/xcc36n0wh3z3yg5bcrhasim0qdidxd61-source.drv'...
-
-trying https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraMono.zip
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100 27.5M  100 27.5M    0     0  14.1M      0  0:00:01  0:00:01 --:--:-- 15.2M
-unpacking source archive /build/FiraMono.zip
-building '/nix/store/vs23ryjdbajzyz5al1q6srqsr2gfqa9y-fira-monoNF-2.3.3.drv'...
-Running phase: unpackPhase
-unpacking source archive /nix/store/4z0ssls9l24ja28ja04rmv2nxgm2w2vb-source
-source root is source
-Running phase: patchPhase
-Running phase: updateAutotoolsGnuConfigScriptsPhase
-Running phase: configurePhase
-no configure script, doing nothing
-Running phase: buildPhase
-no Makefile or custom buildPhase, doing nothing
-Running phase: installPhase
-Running phase: fixupPhase
-shrinking RPATHs of ELF executables and libraries in /nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3
-checking for references to /build/ in /nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3...
-patching script interpreter paths in /nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3
-building '/nix/store/7db6ac6mzhcxchm4kp9mnkayn6g3qp1m-fc-cache.drv'...
-building '/nix/store/f015a0mgyi72124g38w7s1gwxggbmm8x-xserver.conf.drv'...
-building '/nix/store/iplkj4lds0434qfrf02x107cbzbcr2dk-xserver-wrapper.drv'...
-building '/nix/store/s2s8h0vlcgm81zgpsyp4k3q7p8kg1lpr-lightdm.conf.drv'...
-Font directories:
-        /nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37
-        /nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3
-        /nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4
-        /nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3
-        /nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37
-        /nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503
-        /nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005
-        /nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5
-        /nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03
-        /nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047
-        /nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37/share
-        /nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3/share
-        /nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib
-        /nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib
-        /nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37/share
-        /nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503/share
-        /nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005/share
-        /nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share
-        /nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03/share
-        /nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047/share
-        /nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37/share/fonts
-        /nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3/share/fonts
-        /nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib/X11
-        /nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib/X11
-        /nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37/share/fonts
-        /nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503/share/fonts
-        /nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005/share/fonts
-        /nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/doc
-        /nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/fonts
-        /nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03/share/fonts
-        /nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047/share/fonts
-        /nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37/share/fonts/truetype
-        /nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3/share/fonts/opentype
-        /nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib/X11/fonts
-        /nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib/X11/fonts
-        /nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37/share/fonts/truetype
-        /nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503/share/fonts/truetype
-        /nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005/share/fonts/truetype
-        /nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/doc/liberation-fonts-2.1.5
-        /nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/fonts/truetype
-        /nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03/share/fonts/opentype
-        /nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047/share/fonts/noto
-        /nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib/X11/fonts/misc
-        /nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib/X11/fonts/misc
-/nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37/share: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37/share/fonts/truetype: skipping, existing cache is valid: 1 fonts, 0 dirs
-/nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3/share: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3/share/fonts/opentype: skipping, existing cache is valid: 12 fonts, 0 dirs
-/nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib/X11: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib/X11/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib/X11/fonts/misc: skipping, existing cache is valid: 1 fonts, 0 dirs
-/nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib/X11: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib/X11/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib/X11/fonts/misc: skipping, existing cache is valid: 47 fonts, 0 dirs
-/nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37/share: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37/share/fonts/truetype: skipping, existing cache is valid: 22 fonts, 0 dirs
-/nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503/share: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503/share/fonts/truetype: skipping, existing cache is valid: 12 fonts, 0 dirs
-/nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005/share: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005/share/fonts/truetype: skipping, existing cache is valid: 33 fonts, 0 dirs
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share: skipping, existing cache is valid: 0 fonts, 2 dirs
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/doc: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/doc/liberation-fonts-2.1.5: skipping, existing cache is valid: 0 fonts, 0 dirs
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/fonts/truetype: skipping, existing cache is valid: 12 fonts, 0 dirs
-/nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03/share: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03/share/fonts: skipping, existing cache is valid: 3 fonts, 1 dirs
-/nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03/share/fonts/opentype: skipping, existing cache is valid: 1 fonts, 0 dirs
-/nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047/share: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047/share/fonts: skipping, existing cache is valid: 0 fonts, 1 dirs
-/nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047/share/fonts/noto: skipping, existing cache is valid: 1 fonts, 0 dirs
-/nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37/share: skipping, looped directory detected
-/nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3/share: skipping, looped directory detected
-/nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib: skipping, looped directory detected
-/nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib: skipping, looped directory detected
-/nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37/share: skipping, looped directory detected
-/nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503/share: skipping, looped directory detected
-/nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005/share: skipping, looped directory detected
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share: skipping, looped directory detected
-/nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03/share: skipping, looped directory detected
-/nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047/share: skipping, looped directory detected
-/nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37/share/fonts: skipping, looped directory detected
-/nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3/share/fonts: skipping, looped directory detected
-/nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib/X11: skipping, looped directory detected
-/nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib/X11: skipping, looped directory detected
-/nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37/share/fonts: skipping, looped directory detected
-/nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503/share/fonts: skipping, looped directory detected
-/nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005/share/fonts: skipping, looped directory detected
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/doc: skipping, looped directory detected
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/fonts: skipping, looped directory detected
-/nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03/share/fonts: skipping, looped directory detected
-/nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047/share/fonts: skipping, looped directory detected
-/nix/store/f2c0p6w6x2dmp252xjh144mncw8m2rjs-dejavu-fonts-minimal-2.37/share/fonts/truetype: skipping, looped directory detected
-/nix/store/109jw68bsssgljg9id3ajwxqcvd1vwaz-fira-monoNF-2.3.3/share/fonts/opentype: skipping, looped directory detected
-/nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib/X11/fonts: skipping, looped directory detected
-/nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib/X11/fonts: skipping, looped directory detected
-/nix/store/5djka4vhy98x1grxmkghpql3531qjbza-dejavu-fonts-2.37/share/fonts/truetype: skipping, looped directory detected
-/nix/store/ayh3a4kxr3n5dhn7398sv2akrb800kcm-freefont-ttf-20120503/share/fonts/truetype: skipping, looped directory detected
-/nix/store/932j7m1j98jkr9rz51fy96dxxqqqmpp6-gyre-fonts-2.005/share/fonts/truetype: skipping, looped directory detected
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/doc/liberation-fonts-2.1.5: skipping, looped directory detected
-/nix/store/kma5pa02rnk98zfcjj5sj53i30g9wb23-liberation-fonts-2.1.5/share/fonts/truetype: skipping, looped directory detected
-/nix/store/0kl96k9wx88yxv62yi0kr09lpizy1n57-unifont-16.0.03/share/fonts/opentype: skipping, looped directory detected
-/nix/store/48nvqmia8c40k3z5jxmiwgk69qm51qg0-noto-fonts-color-emoji-2.047/share/fonts/noto: skipping, looped directory detected
-/nix/store/x0dj3jyldjfp9kjgca84f5m4p5v0g58r-font-cursor-misc-1.0.4/lib/X11/fonts/misc: skipping, looped directory detected
-/nix/store/pz4m5j3hjdjyxqirx0xwlcpag5cglagk-font-misc-misc-1.1.3/lib/X11/fonts/misc: skipping, looped directory detected
-/var/cache/fontconfig: not cleaning non-existent cache directory
-/nix/store/xzli8chhr93z032vz6zvrmf1r1v3a4pn-fc-cache: cleaning cache directory
-/nix/store/42kkz8xclddba87acxnh2nkjsz2r5cc6-fontconfig-2.16.0-bin/bin/fc-cache: succeeded
-building '/nix/store/84hnf4vdjmk6x6s0ivijbgi8dr4pcxyk-fc-00-nixos-cache.conf.drv'...
-building '/nix/store/xxwl0y5rmxa7gp2savz772r2fkq3s61k-fontconfig-conf.drv'...
-building '/nix/store/qc427751vxvdj68mi8x1672sc8kn1pdz-fontconfig-etc.drv'...
-created 1 symlinks in user environment
-building '/nix/store/5ha5mmip9gv2cxlxz4n7kj2vmbj9xyph-etc.drv'...
-building '/nix/store/6v906fyplgwxcyj62gd9hvx5fv6djlmj-nixos-system-hiego-25.05.813221.9a7b80b6f82a.drv'...
+  /nix/store/2f3nqvnc6igfnqvy3bnbqpjinc504pbg-system-path.drv
+  /nix/store/ddcgbwqckwxdaz53l16gyr7aa3irri0i-dbus-1.drv
+  /nix/store/3lhqffakrxyq1kb0a2qjgdy4lpfffnv6-X-Restart-Triggers-dbus.drv
+  /nix/store/9gglqb0zq9cxkq3v3c9cjmr0962s1p20-unit-dbus.service.drv
+  /nix/store/qgay76iqyilsacf0z2ksdc3zwdily3j4-unit-dbus.service.drv
+  /nix/store/j6jgm893gknbv670mq3hcv23v1kg6r3k-X-Restart-Triggers-polkit.drv
+  /nix/store/ypqp39yix6hd2g2z93pahrjjcmw2982j-unit-polkit.service.drv
+  /nix/store/crl7q0mzmdnz6087lq8sq42w1sn5554h-system-units.drv
+  /nix/store/xnck1inxx5w6128jpwm37ivjbilfdbim-user-units.drv
+  /nix/store/zzlsg3xvmq5xfawh1x1lb9s4cigds2b0-etc.drv
+  /nix/store/mmmlsl6zyrzrpr729s8zdd3f7vig5aq6-nixos-system-hiego-25.05.813221.9a7b80b6f82a.drv
+building '/nix/store/2f3nqvnc6igfnqvy3bnbqpjinc504pbg-system-path.drv'...
+warning: collision between `/nix/store/41zf34cqqaqxcd6q4706vpvd51gwf4gf-clang-wrapper-19.1.7/bin/cpp' and `/nix/store/kks0nbx2riwry5qsx0qr87qr0lswmhzi-gcc-wrapper-14.3.0/bin/cpp'
+warning: collision between `/nix/store/41zf34cqqaqxcd6q4706vpvd51gwf4gf-clang-wrapper-19.1.7/bin/strip' and `/nix/store/kks0nbx2riwry5qsx0qr87qr0lswmhzi-gcc-wrapper-14.3.0/bin/strip'
+warning: collision between `/nix/store/41zf34cqqaqxcd6q4706vpvd51gwf4gf-clang-wrapper-19.1.7/bin/ld.bfd' and `/nix/store/kks0nbx2riwry5qsx0qr87qr0lswmhzi-gcc-wrapper-14.3.0/bin/ld.bfd'
+warning: collision between `/nix/store/41zf34cqqaqxcd6q4706vpvd51gwf4gf-clang-wrapper-19.1.7/bin/ld' and `/nix/store/kks0nbx2riwry5qsx0qr87qr0lswmhzi-gcc-wrapper-14.3.0/bin/ld'
+warning: collision between `/nix/store/41zf34cqqaqxcd6q4706vpvd51gwf4gf-clang-wrapper-19.1.7/bin/ld.gold' and `/nix/store/kks0nbx2riwry5qsx0qr87qr0lswmhzi-gcc-wrapper-14.3.0/bin/ld.gold'
+warning: collision between `/nix/store/41zf34cqqaqxcd6q4706vpvd51gwf4gf-clang-wrapper-19.1.7/bin/c++' and `/nix/store/kks0nbx2riwry5qsx0qr87qr0lswmhzi-gcc-wrapper-14.3.0/bin/c++'
+warning: collision between `/nix/store/41zf34cqqaqxcd6q4706vpvd51gwf4gf-clang-wrapper-19.1.7/bin/cc' and `/nix/store/kks0nbx2riwry5qsx0qr87qr0lswmhzi-gcc-wrapper-14.3.0/bin/cc'
+warning: collision between `/nix/store/5ml21nh4bwwb300slqmfzjgszc5jhkbw-mount.vboxsf/bin/mount.vboxsf' and `/nix/store/07f6kjkpm2xqb5hnb0pw2pbd9fxfsc6p-VirtualBox-GuestAdditions-7.1.12-6.12.59/bin/mount.vboxsf'
+created 10803 symlinks in user environment
+building '/nix/store/j6jgm893gknbv670mq3hcv23v1kg6r3k-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/ddcgbwqckwxdaz53l16gyr7aa3irri0i-dbus-1.drv'...
+building '/nix/store/ypqp39yix6hd2g2z93pahrjjcmw2982j-unit-polkit.service.drv'...
+building '/nix/store/3lhqffakrxyq1kb0a2qjgdy4lpfffnv6-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/9gglqb0zq9cxkq3v3c9cjmr0962s1p20-unit-dbus.service.drv'...
+building '/nix/store/qgay76iqyilsacf0z2ksdc3zwdily3j4-unit-dbus.service.drv'...
+building '/nix/store/xnck1inxx5w6128jpwm37ivjbilfdbim-user-units.drv'...
+building '/nix/store/crl7q0mzmdnz6087lq8sq42w1sn5554h-system-units.drv'...
+building '/nix/store/zzlsg3xvmq5xfawh1x1lb9s4cigds2b0-etc.drv'...
+building '/nix/store/mmmlsl6zyrzrpr729s8zdd3f7vig5aq6-nixos-system-hiego-25.05.813221.9a7b80b6f82a.drv'...
 activating the configuration...
 setting up /etc...
 reloading user units for hiego...
 restarting sysinit-reactivation.target
+reloading the following units: dbus.service
+restarting the following units: polkit.service
 the following new units were started: NetworkManager-dispatcher.service, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
-Done. The new configuration is /nix/store/9r4c11cg9rr13zwdhr9p4wm1nx4d92qn-nixos-system-hiego-25.05.813221.9a7b80b6f82a
+Done. The new configuration is /nix/store/sspaf7v1w3kpr7j3alpj20gjpsfiwyz6-nixos-system-hiego-25.05.813221.9a7b80b6f82a

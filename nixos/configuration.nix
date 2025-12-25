@@ -13,7 +13,12 @@
     # Bootloader
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-
+    
+    #dbus
+    services.dbus.enable = true;
+    
+    #opengl
+    hardware.opengl.enable = true;
 
     # networking
     networking.hostName = "hiego"; 
@@ -23,6 +28,17 @@
 
     hardware.bluetooth.enable = true;
     services.blueman.enable = true;
+
+    #sound
+    security.rtkit.enable = true;
+    services.pipewire = {
+        enable = true;
+        pulse.enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        jack.enable = true;
+    };
+    hardware.pulseaudio.enable = false;
 
     # Set your time zone.
     time.timeZone = "America/New_York";
@@ -43,12 +59,13 @@
     };
 
     # Configure keymap in X11 TODO change to wayland
-    services.xserver = {
+    programs.hyprland = {
         enable = true;
-        desktopManager = {
-            xfce.enable = true;
-        };
-        displayManager.defaultSession = "xfce";
+        xwayland.enable = true; # allows X11 apps
+    };
+    services.displayManager.sddm = {
+        enable = true;
+        wayland.enable = true;
     };
     services.xserver.xkb = {
         layout = "us";
@@ -62,6 +79,10 @@
     };
     environment.variables.ZSH = pkgs.oh-my-zsh;
     environment.variables.FZF_PATH = "${pkgs.fzf}";
+    environment.variables  = {
+        GTK_ICON_THEME = "Pop";
+        XCURSOR_THEME = "Pop";
+    };
 
     # Allow unfree packages and allow clipboard
     virtualisation.virtualbox.host.enable = true;

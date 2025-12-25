@@ -1,0 +1,34 @@
+[colors]
+# Nord theme (https://www.nordtheme.com)
+
+# Default colors
+foreground=ECEFF4
+background=2E3440
+
+# Selection
+selection-foreground=2E3440
+selection-background=88C0D0
+
+# Cursor
+cursor=ECEFF4
+cursor-text=2E3440
+
+# Normal colors
+regular0=3B4252  # black
+regular1=BF616A  # red
+regular2=A3BE8C  # green
+regular3=EBCB8B  # yellow
+regular4=81A1C1  # blue
+regular5=B48EAD  # magenta
+regular6=88C0D0  # cyan
+regular7=E5E9F0  # white
+
+# Bright colors
+bright0=4C566A   # bright black
+bright1=BF616A   # bright red
+bright2=A3BE8C   # bright green
+bright3=EBCB8B   # bright yellow
+bright4=81A1C1   # bright blue
+bright5=B48EAD   # bright magenta
+bright6=8FBCBB   # bright cyan
+bright7=ECEFF4   # bright white

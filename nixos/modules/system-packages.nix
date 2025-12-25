@@ -2,10 +2,13 @@
 {
   environment.systemPackages = with pkgs; [
     # Core utilities
-    zsh curl vim git stow wget unzip xclip cowsay oh-my-zsh tmux fzf btop
+    zsh curl vim git stow wget unzip xclip cowsay oh-my-zsh tmux fzf btop psmisc
+
+    #not so core utilities
+    nix-search-cli
 
     # Terminal
-    kitty
+    kitty foot
 
     # Build tools
     gcc gnumake
@@ -39,7 +42,14 @@
     rustc cargo
 
     # Window utilities
-    rofi
+    rofi wofi waybar matugen swww
+    blueman networkmanagerapplet pavucontrol
+
+    #icons
+    pop-icon-theme pop-gtk-theme adwaita-icon-theme xorg.xcursorthemes
+
+    #clipboard
+    wl-clipboard cliphist xclip
     
     # Browser
     librewolf
