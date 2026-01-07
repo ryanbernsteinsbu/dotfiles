@@ -60,6 +60,9 @@
     xorg.libXcursor
     xorg.libX11
     xorg.libXi
+    gtk3 gtk4
+    # Sound
+    pulseaudioFull pavucontrol
 
     # DBus
     dbus

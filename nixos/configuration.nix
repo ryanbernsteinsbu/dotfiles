@@ -63,6 +63,12 @@
         enable = true;
         xwayland.enable = true; # allows X11 apps
     };
+
+    xdg.portal = {
+        enable = true;
+        xdgOpenUsePortal = true;
+        extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    };
     services.displayManager.sddm = {
         enable = true;
         wayland.enable = true;
