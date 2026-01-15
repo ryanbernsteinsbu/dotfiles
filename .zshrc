@@ -54,8 +54,7 @@ alias preview="find . -type f | fzf --preview 'less {}'"
 alias v="nvim"
 alias ethan="v"
 alias ngc="sudo nix-collect-garbage -d"
-alias nec="sudo nvim /etc/nixos/configuration.nix"
-
+alias rebuild="sudo nixos-rebuild switch"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

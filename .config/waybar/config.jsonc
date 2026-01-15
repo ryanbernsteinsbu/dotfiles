@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["custom/os-button","hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["battery", "tray", "bluetooth"],
+    "modules-right": ["battery", "group/pulseaudio", "tray"],
     "battery": {
         "format": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""]
@@ -27,6 +27,10 @@
             }
         }
     },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -47,24 +51,74 @@
         "on-click": "wofi --show drun",
         "tooltip": false
     },
-    
-    "bluetooth": {
-		"format": "󰂯",
-		"format-disabled": "󰂲",
-		"format-off": "󰂲",
-		"format-on": "󰂰",
-		"format-connected": "󰂱",
-		"min-length": 2,
-		"max-length": 2,
-		"on-click": "blueman-manager",
-		"on-click-right": "bluetoothctl power off && notify-send 'Bluetooth Off' -i 'network-bluetooth-inactive' -r 1925",
-		"tooltip-format": "Device Addr: {device_address}",
-		"tooltip-format-disabled": "Bluetooth Disabled",
-		"tooltip-format-off": "Bluetooth Off",
-		"tooltip-format-on": "Bluetooth Disconnected",
-		"tooltip-format-connected": "Device: {device_alias}",
-		"tooltip-format-enumerate-connected": "Device: {device_alias}",
-		"tooltip-format-connected-battery": "Device: {device_alias}\nBattery: {device_battery_percentage}%",
-		"tooltip-format-enumerate-connected-battery": "Device: {device_alias}\nBattery: {device_battery_percentage}%"
-    }
+
+		// "format": "󰂯",
+		// "format-disabled": "󰂲",
+		// "format-off": "󰂲",
+		// "format-on": "󰂰",
+		// "format-connected": "󰂱",
+		// "min-length": 2,
+		// "max-length": 2,
+		// "on-click": "blueman-manager",
+		// "on-click-right": "bluetoothctl power off && notify-send 'Bluetooth Off' -i 'network-bluetooth-inactive' -r 1925",
+		// "tooltip-format": "Device Addr: {device_address}",
+		// "tooltip-format-disabled": "Bluetooth Disabled",
+		// "tooltip-format-off": "Bluetooth Off",
+		// "tooltip-format-on": "Bluetooth Disconnected",
+		// "tooltip-format-connected": "Device: {device_alias}",
+		// "tooltip-format-enumerate-connected": "Device: {device_alias}",
+		// "tooltip-format-connected-battery": "Device: {device_alias}\nBattery: {device_battery_percentage}%",
+		// "tooltip-format-enumerate-connected-battery": "Device: {device_alias}\nBattery: {device_battery_percentage}%"
+		//   }
+    "group/pulseaudio": {
+		"orientation": "horizontal",
+		"modules": [
+			"pulseaudio#output",
+			"pulseaudio#input"
+		],
+		"drawer": {
+			"transition-left-to-right": false
+		}
+	},
+
+	/*-------------------
+	    output device
+	-------------------*/
+
+	"pulseaudio#output": {
+		"format": "{icon} {volume}%",
+		"format-muted": "{icon} {volume}%",
+		"format-icons": {
+			"default": [ "󰕿", "󰖀", "󰕾" ],
+			"default-muted": "󰝟",
+			"headphone": "󰋋",
+			"headphone-muted": "󰟎",
+			"headset": "󰋎",
+			"headset-muted": "󰋐"
+		},
+		"on-click": "~/.config/waybar/scripts/volume.sh output mute",
+		"on-scroll-up": "~/.config/waybar/scripts/volume.sh output raise",
+		"on-scroll-down": "~/.config/waybar/scripts/volume.sh output lower",
+		"tooltip-format": "<b>Output Device</b>: {desc}"
+	},
+
+	/*----------------
+	    microphone
+	----------------*/
+
+	"pulseaudio#input": {
+		"format": "{format_source}",
+		"format-source": "󰍬 {volume}%",
+		"format-source-muted": "󰍭 {volume}%",
+		"on-click": "~/.config/waybar/scripts/volume.sh input mute",
+		"on-scroll-up": "~/.config/waybar/scripts/volume.sh input raise",
+		"on-scroll-down": "~/.config/waybar/scripts/volume.sh input lower",
+		"tooltip-format": "<b>Input Device</b>: {desc}"
+	},
+    "pulseaudio/slider": {
+    "format": "{volume}%",
+    "format-muted": " MUTE",
+    "step": 5,
+    "tooltip": false
+  }
 }

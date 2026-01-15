@@ -14,6 +14,7 @@
     gcc gnumake
     clang clang-tools gdb
     cmake ninja pkg-config
+    openssl_3
 
     # Libraries
     libevent
@@ -62,7 +63,10 @@
     xorg.libXi
     gtk3 gtk4
     # Sound
-    pulseaudioFull pavucontrol
+    pulseaudioFull pavucontrol pa_applet
+
+    #misc apps
+    spotify vesktop hyprpaper
 
     # DBus
     dbus

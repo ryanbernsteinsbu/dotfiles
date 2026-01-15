@@ -1,73 +1,169 @@
+/* -- Global rules -- */
 * {
-    border: none;
-    border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    min-height: 0;
+  border: none;
+  font-family: "Fura Mono NF";
+  font-size: 16px;
 }
-
 window#waybar {
-    background: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: white;
+  background: rgba(34, 36, 54, 0.6);
+  border-radius: 10px;
 }
 
-tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
-}
-tooltip label {
-  color: white;
+window#waybar.hidden {
+  opacity: 0.2;
 }
 
-#workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: white;
-    border-bottom: 3px solid transparent;
+/* - Genera rules for visible modules -- */
+#custom-os-button,
+#clock,
+#pulseaudio,
+#battery,
+#tray,
+#language {
+  color: #161320;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: none;
 }
 
-#workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid white;
+/* Separation to the left */
+#custom-os-button {
+  font-size: 24px;
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: #FFFFFF;
 }
 
-#mode, #clock, #battery {
-    padding: 0 10px;
-}
-
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
-}
-
-#clock {
-    background-color: #64727D;
+/* Separation to the rigth */
+#clock{
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-left: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: black;
+  margin-left: 5px;
+  padding-right: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#tray,
+#language {
+  margin-right: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-#battery.charging {
-    color: white;
-    background-color: #26A65B;
+/* -- Specific styles -- */
+
+
+#clock {
+  background: #ABE9B3;
 }
 
+#battery {
+  background: #96CDFB;
+}
+
+#tray {
+  background: #DDB6F2;
+}
+
+#disk {
+  background: #F5C2E7;
+}
+
+#temperature {
+  background: #F8BD96;
+}
+
+/* Modules center */
+#workspaces {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 6px 5px;
+  padding: 0px 6px;
+}
+
+#workspaces button {
+  color: #B5E8E0;
+  background: transparent;
+  padding: 6px 6px;
+  transition: transform 0.3s ease;
+}
+
+#workspaces button.occupied {
+  color: #A6E3A1;
+}
+
+#workspaces button.active {
+  color: #89B4FA;
+  /* text-shadow: 0 0 4px #ABE9B3; */
+}
+
+#workspaces button:hover {
+  color: #89B4FA;
+}
+
+#workspaces button.active:hover {}
+
+/* Modules right */
+#tray {
+  background: #F1EB9D;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0px 5px;
+  margin-right: 5px;
+}
+
+#tray button {
+  padding: 0px 5px;
+  margin: 0px 3px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+#tray button.active {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#tray button:hover {
+  background: rgba(34, 36, 54, 0.5);
+}
+
+#pulseaudio{
+  min-width: 55px;
+  color: #1A1826;
+  background: #E8A2AF;
+}
+
+
+#pulseaudio-slider slider {}
+
+
+#network {
+  background: #CBA6F7;
+  padding-right: 13px;
+}
+
+#language {
+  background: #A6E3A1;
+  padding-right: 15px;
+}
+
+/* === Optional animation === */
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
-}
-
-#battery.warning:not(.charging) {
-    background: #f53c3c;
-    color: white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  to {
+    background-color: #BF616A;
+    color: #B5E8E0;
+  }
 }
