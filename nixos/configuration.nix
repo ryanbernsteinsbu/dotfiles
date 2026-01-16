@@ -18,7 +18,7 @@
     services.dbus.enable = true;
     
     #opengl
-    hardware.opengl.enable = true;
+    hardware.graphics.enable = true;
 
     # networking
     networking.hostName = "hiego"; 
@@ -38,7 +38,7 @@
         alsa.support32Bit = true;
         jack.enable = true;
     };
-    hardware.pulseaudio.enable = false;
+    services.pulseaudio.enable = false;
 
     # Set your time zone.
     time.timeZone = "America/New_York";
@@ -71,8 +71,13 @@
     };
     services.displayManager.sddm = {
         enable = true;
-        wayland.enable = true;
+        wayland.enable = false;
+        theme = "where_is_my_sddm_theme";
+        extraPackages = [
+            pkgs.where-is-my-sddm-theme
+        ];
     };
+    services.xserver.enable = true;
     services.xserver.xkb = {
         layout = "us";
         variant = "";
@@ -85,6 +90,7 @@
     };
     environment.variables.ZSH = pkgs.oh-my-zsh;
     environment.variables.FZF_PATH = "${pkgs.fzf}";
+    environment.variables.HYPRSHOT_DIR = "/home/hiego/Screenshots/";
     environment.variables  = {
         GTK_ICON_THEME = "Pop";
         XCURSOR_THEME = "Pop";

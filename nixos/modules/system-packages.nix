@@ -1,11 +1,17 @@
 { pkgs, ... }:
+let
+    where-is-my-sddm =
+        pkgs.callPackage ./sddm-theme.nix {};
+    spotify-tui =
+        pkgs.callPackage ./spotify-tui.nix {};
+in
 {
   environment.systemPackages = with pkgs; [
     # Core utilities
     zsh curl vim git stow wget unzip xclip cowsay oh-my-zsh tmux fzf btop psmisc
 
     #not so core utilities
-    nix-search-cli
+    nix-search-cli brightnessctl
 
     # Terminal
     kitty foot
@@ -45,7 +51,8 @@
     # Window utilities
     rofi wofi waybar matugen swww
     blueman networkmanagerapplet pavucontrol
-
+    grim hyprshot where-is-my-sddm.where-is-my-sddm
+    spotify-tui
     #icons
     pop-icon-theme pop-gtk-theme adwaita-icon-theme xorg.xcursorthemes
 
@@ -63,10 +70,11 @@
     xorg.libXi
     gtk3 gtk4
     # Sound
-    pulseaudioFull pavucontrol pa_applet
+    pulseaudioFull pavucontrol pa_applet playerctl
 
+    
     #misc apps
-    spotify vesktop hyprpaper
+    spotify vesktop hyprpaper 
 
     # DBus
     dbus
