@@ -11,7 +11,7 @@ in
     zsh curl vim git stow wget unzip xclip cowsay oh-my-zsh tmux fzf btop psmisc
 
     #not so core utilities
-    nix-search-cli brightnessctl
+    nix-search-cli brightnessctl kdePackages.dolphin
 
     # Terminal
     kitty foot
@@ -63,23 +63,26 @@ in
     librewolf
     # X11 / Mesa development libraries
     mesa
-    xorg.libXrandr
-    xorg.libXinerama
-    xorg.libXcursor
-    xorg.libX11
-    xorg.libXi
-    gtk3 gtk4
+    xorg.libXrandr xorg.libXinerama xorg.libXcursor
+    xorg.libX11 xorg.libXi gtk3 gtk4 vulkan-tools
+    libsForQt5.qtstyleplugin-kvantum libsForQt5.qt5ct libsForQt5.qt5.qtgraphicaleffects
     # Sound
     pulseaudioFull pavucontrol pa_applet playerctl
 
-    
     #misc apps
     spotify vesktop hyprpaper 
 
     # DBus
     dbus
   ];
-
+  nixpkgs.config.qt5 = {
+      enable = true;
+      platformTheme = "qt5ct"; 
+      style = {
+          package = pkgs.utterly-nord-plasma;
+          name = "Utterly Nord Plasma";
+      };
+  };
   # Make Neovim the default editor
   programs.neovim = {
       enable = true;
@@ -88,6 +91,11 @@ in
   programs.java = {
       enable = true;
       package = pkgs.javaPackages.compiler.openjdk24;
+  };
+  programs.steam = {
+      enable = true;
+      extest.enable = true;
+      protontricks.enable = true;
   };
   environment.variables = {
       PKG_CONFIG_PATH =

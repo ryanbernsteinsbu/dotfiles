@@ -10,10 +10,10 @@
         rev = "${version}";
         sha256 = "sha256-SNCgpgPyJf9tKE6UyvmEpSJbIfLmAmPazTF85j0W7a0=";
     };
-    # cp $src/where_is_my_sddm_theme/example_configs/nord.conf $TMPDIR/theme.conf
     installPhase = ''
       mkdir -p $out/share/sddm/themes
-      cp -a $src/where_is_my_sddm_theme/* $TMPDIR 
+      cp -a $src/where_is_my_sddm_theme_qt5/* $TMPDIR 
+      cp -f $src/where_is_my_sddm_theme/example_configs/nord.conf $TMPDIR/theme.conf
       cp -a $TMPDIR $out/share/sddm/themes/where_is_my_sddm_theme
     '';
   };

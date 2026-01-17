@@ -19,7 +19,11 @@
     
     #opengl
     hardware.graphics.enable = true;
-
+    hardware.graphics.extraPackages = with pkgs; [
+        vulkan-loader
+            vulkan-validation-layers
+            vulkan-extension-layer
+    ];
     # networking
     networking.hostName = "hiego"; 
     networking.networkmanager.enable = true;
@@ -71,12 +75,17 @@
     };
     services.displayManager.sddm = {
         enable = true;
-        wayland.enable = false;
+        wayland.enable = true;
         theme = "where_is_my_sddm_theme";
         extraPackages = [
             pkgs.where-is-my-sddm-theme
         ];
     };
+    systemd.services.sddm = {
+        enable = true;
+        serviceConfig.ExecStart = "${pkgs.libsForQt5.sddm}/bin/sddm --theme /run/current-system/sw/share/sddm/themes/where_is_my_sddm_theme";
+    };
+
     services.xserver.enable = true;
     services.xserver.xkb = {
         layout = "us";
@@ -95,6 +104,7 @@
         GTK_ICON_THEME = "Pop";
         XCURSOR_THEME = "Pop";
     };
+    environment.variables.QT_QPA_PLATFORMTHEME = "qt5ct";
 
     # Allow unfree packages and allow clipboard
     virtualisation.virtualbox.host.enable = true;
