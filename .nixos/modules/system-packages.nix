@@ -12,6 +12,7 @@ in
 
     #not so core utilities
     nix-search-cli brightnessctl kdePackages.dolphin
+    lxappearance
 
     # Terminal
     kitty foot
@@ -74,6 +75,7 @@ in
 
     # DBus
     dbus
+    dbus.dev
   ];
   nixpkgs.config.qt5 = {
       enable = true;
@@ -99,7 +101,7 @@ in
   };
   environment.variables = {
       PKG_CONFIG_PATH =
-          "${pkgs.imagemagick.dev}/lib/pkgconfig";
+          "${pkgs.imagemagick.dev}/lib/pkgconfig:" + "${pkgs.dbus.dev}/lib/pkgconfig";
   };
   imports = [./firaMono.nix];
 }

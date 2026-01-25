@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["custom/os-button","hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["battery", "group/pulseaudio", "tray"],
+    "modules-right": ["custom/bandwidth", "battery", "group/pulseaudio", "tray"],
     "battery": {
         "format": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""]
@@ -120,5 +120,8 @@
     "format-muted": " MUTE",
     "step": 5,
     "tooltip": false
+  },
+  "custom/bandwidth": {
+        "exec": "~/.config/waybar/scripts/bandwidth.py"
   }
 }

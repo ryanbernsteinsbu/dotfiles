@@ -1,9 +1,9 @@
 { pkgs, ... }:
 
 {
-    users.users.hiego = {
+    users.users.ryand = {
         isNormalUser = true;
-        description = "hiego";
+        description = "ryand";
         shell = pkgs.zsh;
         extraGroups = [ "networkmanager" "wheel" "audio" "video" "input"];
         packages = with pkgs; [];

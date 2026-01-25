@@ -25,7 +25,7 @@
             vulkan-extension-layer
     ];
     # networking
-    networking.hostName = "hiego"; 
+    networking.hostName = "ryand"; 
     networking.networkmanager.enable = true;
 
     services.resolved.enable = true;
@@ -41,6 +41,10 @@
         alsa.enable = true;
         alsa.support32Bit = true;
         jack.enable = true;
+        wireplumber = {
+            enable = true;
+            package = pkgs.wireplumber;
+        };
     };
     services.pulseaudio.enable = false;
 
@@ -71,7 +75,7 @@
     xdg.portal = {
         enable = true;
         xdgOpenUsePortal = true;
-        extraPortals = [pkgs.xdg-desktop-portal-gtk];
+        extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr pkgs.xdg-desktop-portal-hyprland];
     };
     services.displayManager.sddm = {
         enable = true;
@@ -99,7 +103,7 @@
     };
     environment.variables.ZSH = pkgs.oh-my-zsh;
     environment.variables.FZF_PATH = "${pkgs.fzf}";
-    environment.variables.HYPRSHOT_DIR = "/home/hiego/Screenshots/";
+    environment.variables.HYPRSHOT_DIR = "/home/ryand/Screenshots/";
     environment.variables  = {
         GTK_ICON_THEME = "Pop";
         XCURSOR_THEME = "Pop";
