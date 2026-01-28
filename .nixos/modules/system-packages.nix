@@ -53,7 +53,7 @@ in
     rofi wofi waybar matugen swww
     blueman networkmanagerapplet pavucontrol
     grim hyprshot where-is-my-sddm.where-is-my-sddm
-    spotify-tui
+    spotify-tui baobab
     #icons
     pop-icon-theme pop-gtk-theme adwaita-icon-theme xorg.xcursorthemes
 
@@ -69,13 +69,18 @@ in
     libsForQt5.qtstyleplugin-kvantum libsForQt5.qt5ct libsForQt5.qt5.qtgraphicaleffects
     # Sound
     pulseaudioFull pavucontrol pa_applet playerctl
-
+    dunst libnotify
     #misc apps
-    spotify vesktop hyprpaper 
+    spotify hyprpaper 
+    discord-canary
 
     # DBus
     dbus
     dbus.dev
+    #android
+    android-studio-tools android-studio
+    # meetings
+    zoom-us
   ];
   nixpkgs.config.qt5 = {
       enable = true;

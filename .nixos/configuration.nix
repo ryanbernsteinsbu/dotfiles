@@ -46,6 +46,17 @@
             package = pkgs.wireplumber;
         };
     };
+# screenshare fix
+    services.pipewire.extraConfig.pipewire."10-no-dmabuf.conf" = {
+        "context.properties" = {
+            "link.max-buffers" = 16;
+            "link.allow-dmabuf" = false;
+        };
+    };
+    environment.variables = {
+        XDG_PORTAL_HYPRLAND_DISABLE_DMABUF = "1";
+    };
+
     services.pulseaudio.enable = false;
 
     # Set your time zone.
@@ -75,7 +86,7 @@
     xdg.portal = {
         enable = true;
         xdgOpenUsePortal = true;
-        extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-wlr pkgs.xdg-desktop-portal-hyprland];
+        extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
     };
     services.displayManager.sddm = {
         enable = true;
