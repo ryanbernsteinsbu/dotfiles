@@ -25,7 +25,7 @@
             vulkan-extension-layer
     ];
     # networking
-    networking.hostName = "ryand"; 
+    networking.hostName = "hiego"; 
     networking.networkmanager.enable = true;
 
     services.resolved.enable = true;
@@ -98,7 +98,7 @@
     };
     systemd.services.sddm = {
         enable = true;
-        serviceConfig.ExecStart = "${pkgs.libsForQt5.sddm}/bin/sddm --theme /run/current-system/sw/share/sddm/themes/where_is_my_sddm_theme";
+        serviceConfig.ExecStart = "${pkgs.kdePackages.sddm}/bin/sddm --theme /run/current-system/sw/share/sddm/themes/where_is_my_sddm_theme";
     };
 
     services.xserver.enable = true;
@@ -106,7 +106,14 @@
         layout = "us";
         variant = "";
     };
-
+    # Docker
+    virtualisation.docker = {
+        enable = true;
+        rootless = {
+            enable = true;
+            setSocketVariable = true;
+        };
+    };
     # enable zsh
     programs.zsh = {
       enable = true;
@@ -114,7 +121,7 @@
     };
     environment.variables.ZSH = pkgs.oh-my-zsh;
     environment.variables.FZF_PATH = "${pkgs.fzf}";
-    environment.variables.HYPRSHOT_DIR = "/home/ryand/Screenshots/";
+    environment.variables.HYPRSHOT_DIR = "/home/hiego/Screenshots/";
     environment.variables  = {
         GTK_ICON_THEME = "Pop";
         XCURSOR_THEME = "Pop";

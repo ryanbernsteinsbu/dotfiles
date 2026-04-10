@@ -2,7 +2,7 @@
 * {
   border: none;
   font-family: "Fura Mono NF";
-  font-size: 16px;
+  font-size: 20px;
 }
 window#waybar {
   background: rgba(34, 36, 54, 0);
@@ -31,7 +31,7 @@ window#waybar.hidden {
 
 /* Separation to the left */
 #custom-os-button {
-  font-size: 24px;
+  font-size: 30px;
   margin-right: 5px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;

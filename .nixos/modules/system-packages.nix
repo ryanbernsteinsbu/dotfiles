@@ -8,11 +8,11 @@ in
 {
   environment.systemPackages = with pkgs; [
     # Core utilities
-    zsh curl vim git stow wget unzip xclip cowsay oh-my-zsh tmux fzf btop psmisc
+    zsh curl vim git stow wget unzip xclip cowsay oh-my-zsh tmux fzf btop psmisc emacs
 
     #not so core utilities
     nix-search-cli brightnessctl kdePackages.dolphin
-    lxappearance
+    lxappearance docker maven
 
     # Terminal
     kitty foot
@@ -61,7 +61,7 @@ in
     wl-clipboard cliphist xclip
     
     # Browser
-    librewolf
+    librewolf firefox
     # X11 / Mesa development libraries
     mesa
     xorg.libXrandr xorg.libXinerama xorg.libXcursor
@@ -81,6 +81,11 @@ in
     android-studio-tools android-studio
     # meetings
     zoom-us
+    # minecraft
+    lunar-client
+    prismlauncher
+    # sql 
+    postgresql
   ];
   nixpkgs.config.qt5 = {
       enable = true;
@@ -97,18 +102,20 @@ in
   }; 
   programs.java = {
       enable = true;
-      package = pkgs.javaPackages.compiler.openjdk24;
+      package = pkgs.javaPackages.compiler.openjdk25;
   };
-  programs.steam = {
-      enable = true;
-      extest.enable = true;
-      protontricks.enable = true;
+ programs.steam = {
+     enable = true;
+     extest.enable = true;
+     protontricks.enable = true;
   };
   environment.variables = {
       PKG_CONFIG_PATH =
           "${pkgs.imagemagick.dev}/lib/pkgconfig:" + "${pkgs.dbus.dev}/lib/pkgconfig";
+      # EDITOR = "nvim";
+      # VISUAL = "nvim";
   };
-  imports = [./firaMono.nix];
+  imports = [./firaMono.nix ];
 }
 
 

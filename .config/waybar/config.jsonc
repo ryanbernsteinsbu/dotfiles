@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["custom/os-button","hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/bandwidth", "battery", "group/pulseaudio", "tray"],
+    "modules-right": ["battery", "group/pulseaudio", "tray"],
     "battery": {
         "format": "{capacity}% {icon}",
         "format-icons": ["", "", "", "", ""]
