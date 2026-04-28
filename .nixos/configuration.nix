@@ -56,6 +56,13 @@
     environment.variables = {
         XDG_PORTAL_HYPRLAND_DISABLE_DMABUF = "1";
     };
+    xdg.mime.defaultApplications = {
+        "text/html" = "librewolf.desktop";
+        "x-scheme-handler/http" = "librewolf.desktop";
+        "x-scheme-handler/https" = "librewolf.desktop";
+        "x-scheme-handler/about" = "librewolf.desktop";
+        "x-scheme-handler/unknown" = "librewolf.desktop";
+    };
 
     services.pulseaudio.enable = false;
 
@@ -94,6 +101,7 @@
         theme = "where_is_my_sddm_theme";
         extraPackages = [
             pkgs.where-is-my-sddm-theme
+            pkgs.kdePackages.qt5compat
         ];
     };
     systemd.services.sddm = {

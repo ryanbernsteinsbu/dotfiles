@@ -12,7 +12,7 @@ in
 
     #not so core utilities
     nix-search-cli brightnessctl kdePackages.dolphin
-    lxappearance docker maven
+    lxappearance docker maven tmuxinator
 
     # Terminal
     kitty foot
@@ -53,7 +53,7 @@ in
     rofi wofi waybar matugen swww
     blueman networkmanagerapplet pavucontrol
     grim hyprshot where-is-my-sddm.where-is-my-sddm
-    spotify-tui baobab
+    spotify-tui baobab postman
     #icons
     pop-icon-theme pop-gtk-theme adwaita-icon-theme xorg.xcursorthemes
 
@@ -86,6 +86,8 @@ in
     prismlauncher
     # sql 
     postgresql
+    #font
+    wqy_microhei
   ];
   nixpkgs.config.qt5 = {
       enable = true;
