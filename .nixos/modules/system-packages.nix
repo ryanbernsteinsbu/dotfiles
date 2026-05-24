@@ -12,7 +12,7 @@ in
 
     #not so core utilities
     nix-search-cli brightnessctl kdePackages.dolphin
-    lxappearance docker maven tmuxinator
+    lxappearance docker maven tmuxinator kdePackages.gwenview
 
     # Terminal
     kitty foot

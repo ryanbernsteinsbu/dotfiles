@@ -56,13 +56,6 @@
     environment.variables = {
         XDG_PORTAL_HYPRLAND_DISABLE_DMABUF = "1";
     };
-    xdg.mime.defaultApplications = {
-        "text/html" = "librewolf.desktop";
-        "x-scheme-handler/http" = "librewolf.desktop";
-        "x-scheme-handler/https" = "librewolf.desktop";
-        "x-scheme-handler/about" = "librewolf.desktop";
-        "x-scheme-handler/unknown" = "librewolf.desktop";
-    };
 
     services.pulseaudio.enable = false;
 
@@ -114,6 +107,15 @@
         layout = "us";
         variant = "";
     };
+    xdg.mime.enable = true;
+    xdg.mime.defaultApplications = {
+        "text/html" = "librewolf.desktop";
+        "x-scheme-handler/http" = "librewolf.desktop";
+        "x-scheme-handler/https" = "librewolf.desktop";
+        "x-scheme-handler/about" = "librewolf.desktop";
+        "x-scheme-handler/unknown" = "librewolf.desktop";
+    };
+    environment.sessionVariables.DEFAULT_BROWSER = "${pkgs.librewolf}/bin/librewolf";
     # Docker
     virtualisation.docker = {
         enable = true;
